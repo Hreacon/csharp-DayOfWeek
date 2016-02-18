@@ -38,13 +38,16 @@ namespace DayOfWeekNS.Objects
     public static int YearCode(int year)
     {
       int yearCode = 0;
-      for(int i = 2001;i<=year;i++)
+      if(year >= 2001)
       {
-        if(DayOfWeek.isLeapYear(i))
+        for(int i = 2001;i<=year;i++)
         {
-          // Console.WriteLine(i + " is leap year");
-          yearCode += 2;
-        } else yearCode += 1;
+          if(DayOfWeek.isLeapYear(i))
+          {
+            // Console.WriteLine(i + " is leap year");
+            yearCode += 2;
+          } else yearCode += 1;
+        }
       }
       // Console.WriteLine("Year: " +year+ " YearCode: " + yearCode % 7);
       return yearCode % 7;

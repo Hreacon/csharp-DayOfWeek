@@ -1,0 +1,28 @@
+@Html.Partial("header.cshtml")
+<div class="container">
+
+
+  <h1>Enter a date and we will tell you what day of the week it was.</h1>
+
+  <div>
+    <form action="/findDay" method="post">
+      <div>
+        <label for="month">Enter the month</label>
+        <input type="number" name="month" placeholder="month" min="1" max="12">
+      </div>
+      <div>
+        <label for="day">Enter the day</label>
+        <input type="number" name="day" placeholder="day" min="1" max="31">
+      </div>
+      <div>
+        <label for="year">Enter the year</label>
+        <input type="number" name="year" value="2000" min="2000">
+      </div>
+      <div>
+        <button type="submit" name="button">Find out</button>
+      </div>
+    </form>
+  </div>
+
+  <h3>@Model</h3>
+</div>

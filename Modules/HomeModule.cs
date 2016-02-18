@@ -8,7 +8,14 @@ namespace DayOfWeekNS
     public HomeModule()
     {
       Get["/"] = _ => {
-        return View["header.cshtml"];
+        return View["index.cshtml"];
+      };
+      Post["/findDay"]= _ => {
+        //run function Do()
+        string output =  DayOfWeek.Do(int.Parse(Request.Form["month"]),
+        int.Parse(Request.Form["day"]),
+        int.Parse(Request.Form["year"]));
+        return View["index.cshtml", output];
       };
     }
   }
