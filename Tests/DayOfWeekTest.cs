@@ -22,7 +22,7 @@ namespace DayOfWeekNS
     [Fact]
     public void test4_enter_todaysDate_and_return_thursday()
     {
-      Assert.Equal("Saturday", DayOfWeek.Do(5,20,2069));
+      Assert.Equal("Monday", DayOfWeek.Do(5,20,2069));
     }
     [Fact]
     public void test5_enter_todaysDate_and_return_thursday()
